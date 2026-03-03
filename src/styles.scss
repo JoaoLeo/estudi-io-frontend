@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use '../theme-colors' as theme;
+
+/* obrigatório */
+@include mat.core();
+
+/* Criando o tema usando as paletas geradas */
+$library-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: theme.$primary-palette,
+    tertiary: theme.$tertiary-palette
+  ),
+  typography: (
+    brand-family: 'Merriweather'
+  )
+));
+
+/* Aplicar tema */
+:root {
+  @include mat.all-component-themes($library-theme);
+}
+
+/* Identidade visual biblioteca */
+body {
+  background-color: #F4F1EA;
+  color: #2E2A26;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+}
+
+mat-card {
+  border: 1px solid #D6D0C4;
+  border-radius: 8px;
+}
+
+a {
+  color: #5C4033;
+  text-decoration: none;
+}
+
+button {
+  border-radius: 6px;
+}
