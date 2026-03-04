@@ -1,0 +1,42 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+}
+
+.brand-side {
+  width: 20%;
+  background-color: #5C4033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-side h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.form-side {
+  width: 80%;
+  background-color: #F4F1EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 400px;
+  padding: 2rem;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.extra {
+  margin-top: 1rem;
+  text-align: center;
+}

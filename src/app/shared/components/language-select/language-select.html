@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline" class="lang-select">
+  <mat-select
+    [value]="languageService.getCurrentLanguage()"
+    (selectionChange)="changeLanguage($event.value)"
+  >
+    <mat-option value="pt-BR">PT-BR</mat-option>
+    <mat-option value="en">EN</mat-option>
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,9 @@
+{
+  "login": {
+    "title": "Entrar",
+    "email": "Email",
+    "password": "Senha",
+    "button": "Entrar",
+    "createAccount": "Criar conta"
+  }
+}

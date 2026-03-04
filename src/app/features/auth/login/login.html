@@ -1,12 +1,36 @@
-<h3>User Login</h3>
-<form>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="text" formControlName="email" class="form-control" placeholder="Enter email here"/>
+<div class="login-container">
+
+  <div class="brand-side">
+    <h1>Estud-io</h1>
   </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" formControlName="password" class="form-control" placeholder="Enter password here"/>
+<div class="top-bar">
+  <div class="spacer"></div>
+  <app-language-select></app-language-select>
+</div>
+  <div class="form-side">
+    <mat-card class="login-card">
+      <h2>{{ 'login.title' | translate }}</h2>
+
+      <form>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'login.email' | translate }}</mat-label>
+          <input matInput type="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'login.password' | translate }}</mat-label>
+          <input matInput type="password" />
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="full-width">
+           {{ 'login.button' | translate }}
+        </button>
+      </form>
+
+      <div class="extra">
+        <a routerLink="/register">{{ 'login.createAccount' | translate }}</a>
+      </div>
+    </mat-card>
   </div>
-  <button type="submit">Login</button>
-</form>
+
+</div>
