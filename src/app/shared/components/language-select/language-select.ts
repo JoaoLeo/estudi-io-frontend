@@ -13,7 +13,21 @@ export class LanguageSelectComponent {
 
   constructor(public languageService: LanguageService) {}
 
+    languages = [
+    {
+      code: 'pt-BR',
+      label: 'Português',
+      flag: '/assets/flags/br.svg'
+    },
+    {
+      code: 'en',
+      label: 'English',
+      flag: '/assets/flags/us.svg'
+    }
+  ];
+
   changeLanguage(lang: string) {
     this.languageService.setLanguage(lang);
   }
+
 }

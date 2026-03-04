@@ -3,7 +3,12 @@
     [value]="languageService.getCurrentLanguage()"
     (selectionChange)="changeLanguage($event.value)"
   >
-    <mat-option value="pt-BR">PT-BR</mat-option>
-    <mat-option value="en">EN</mat-option>
+
+    @for (lang of languages; track lang.code) {
+  <mat-option [value]="lang.code">
+    <img [src]="lang.flag" class="flag" />
+    {{ lang.label }}
+  </mat-option>
+}
   </mat-select>
 </mat-form-field>
