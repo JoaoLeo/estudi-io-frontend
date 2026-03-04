@@ -1,14 +1,21 @@
-<mat-form-field appearance="outline" class="lang-select">
-  <mat-select
-    [value]="languageService.getCurrentLanguage()"
-    (selectionChange)="changeLanguage($event.value)"
-  >
+<mat-select
+  class="lang-chip"
+  [value]="languageService.getCurrentLanguage()"
+  (selectionChange)="changeLanguage($event.value)"
+>
+  <mat-select-trigger>
+    <div class="chip-content">
+      <img [src]="selectedLanguage?.flag" class="flag" alt="" />
+      <span>{{ selectedLanguage?.label }}</span>
+    </div>
+  </mat-select-trigger>
 
-    @for (lang of languages; track lang.code) {
-  <mat-option [value]="lang.code">
-    <img [src]="lang.flag" class="flag" />
-    {{ lang.label }}
-  </mat-option>
-}
-  </mat-select>
-</mat-form-field>
+  @for (lang of languages; track lang.code) {
+    <mat-option [value]="lang.code">
+      <div class="option-content">
+        <img [src]="lang.flag" class="flag" alt="" />
+        <span>{{ lang.label }}</span>
+      </div>
+    </mat-option>
+  }
+</mat-select>

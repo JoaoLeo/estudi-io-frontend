@@ -42,3 +42,26 @@ a {
 button {
   border-radius: 6px;
 }
+
+// Language select dropdown
+.mat-mdc-select-panel .mat-mdc-option .option-content {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+}
+
+.mat-mdc-select-panel .mat-mdc-option .flag {
+  width: 20px !important;
+  height: 14px !important;
+  object-fit: cover !important;
+  border-radius: 2px !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+
+// Corrige largura do overlay do dropdown
+.cdk-overlay-pane:has(.mat-mdc-select-panel) {
+  width: auto !important;
+  min-width: 130px !important;
+}

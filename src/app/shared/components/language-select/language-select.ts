@@ -30,4 +30,10 @@ export class LanguageSelectComponent {
     this.languageService.setLanguage(lang);
   }
 
+  get selectedLanguage() {
+  return this.languages.find(
+    l => l.code === this.languageService.getCurrentLanguage()
+  );
+}
+
 }

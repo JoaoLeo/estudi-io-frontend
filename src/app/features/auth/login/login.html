@@ -3,11 +3,12 @@
   <div class="brand-side">
     <h1>Estud-io</h1>
   </div>
-<div class="top-bar">
-  <div class="spacer"></div>
-  <app-language-select></app-language-select>
-</div>
+
   <div class="form-side">
+    <div class="top-bar">
+      <app-language-select></app-language-select>
+    </div>
+
     <mat-card class="login-card">
       <h2>{{ 'login.title' | translate }}</h2>
 
@@ -23,7 +24,7 @@
         </mat-form-field>
 
         <button mat-raised-button color="primary" class="full-width">
-           {{ 'login.button' | translate }}
+          {{ 'login.button' | translate }}
         </button>
       </form>
 
