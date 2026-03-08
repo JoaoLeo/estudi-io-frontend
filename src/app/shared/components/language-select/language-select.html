@@ -4,8 +4,8 @@
   (selectionChange)="changeLanguage($event.value)"
 >
   <mat-select-trigger>
-    <div class="chip-content">
-      <img [src]="selectedLanguage?.flag" class="flag" alt="" />
+    <div class="option-content">
+    <mat-icon class="flag-icon" [svgIcon]="selectedLanguage!!.icon"></mat-icon>
       <span>{{ selectedLanguage?.label }}</span>
     </div>
   </mat-select-trigger>
@@ -13,7 +13,7 @@
   @for (lang of languages; track lang.code) {
     <mat-option [value]="lang.code">
       <div class="option-content">
-        <img [src]="lang.flag" class="flag" alt="" />
+<mat-icon class="flag-icon" [svgIcon]="lang.icon"></mat-icon>
         <span>{{ lang.label }}</span>
       </div>
     </mat-option>

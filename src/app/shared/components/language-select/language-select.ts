@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { LanguageService } from '../../../core/services/language.service';
+import { MatButtonModule } from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-language-select',
   standalone: true,
-  imports: [MatFormFieldModule, MatSelectModule],
+  imports: [MatFormFieldModule, MatSelectModule, MatButtonModule, MatMenuModule, MatIconModule],
   templateUrl: './language-select.html'
 })
 export class LanguageSelectComponent {
@@ -17,12 +20,12 @@ export class LanguageSelectComponent {
     {
       code: 'pt-BR',
       label: 'Português',
-      flag: '/assets/flags/br.svg'
+      icon: 'flag-br'
     },
     {
       code: 'en',
       label: 'English',
-      flag: '/assets/flags/us.svg'
+      icon: 'flag-us'
     }
   ];
 

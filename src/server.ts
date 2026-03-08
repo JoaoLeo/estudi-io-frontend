@@ -12,6 +12,12 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
+const assetsFolder = join(browserDistFolder, 'assets');
+
+app.use('/assets', express.static(assetsFolder, {
+  maxAge: '1y'
+}));
+
 /**
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.
