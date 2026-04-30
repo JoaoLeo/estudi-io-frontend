@@ -12,7 +12,7 @@ export class ApiService {
   private baseUrl = environment.apiUrl;
 
   private getHeaders(): HttpHeaders {
-    const lang = localStorage.getItem('language') ?? 'pt-BR';
+    const lang = localStorage.getItem('lang') ?? 'pt-BR';
 
     return new HttpHeaders({
       'Content-Type': 'application/json',

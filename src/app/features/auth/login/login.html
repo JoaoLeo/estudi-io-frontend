@@ -12,18 +12,18 @@
     <mat-card class="login-card">
       <h2>{{ 'login.title' | translate }}</h2>
 
-      <form>
+      <form (ngSubmit)="login()">
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>{{ 'login.email' | translate }}</mat-label>
-          <input matInput type="email" />
+          <input matInput [(ngModel)]="email" name="email" type="email" />
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>{{ 'login.password' | translate }}</mat-label>
-          <input matInput type="password" />
+          <input matInput [(ngModel)]="password" name="password" type="password" />
         </mat-form-field>
 
-        <button mat-raised-button color="primary" class="full-width">
+        <button mat-raised-button color="primary" class="full-width" [disabled]="loading || (!email || !password)">
           {{ 'login.button' | translate }}
         </button>
       </form>
@@ -33,6 +33,8 @@
           <a routerLink="/register">{{ 'login.createAccount' | translate }}</a>
         </button>
       </div>
+
+      <app-error-message [message]="error"></app-error-message>
     </mat-card>
   </div>
 
